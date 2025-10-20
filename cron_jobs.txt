@@ -1,0 +1,11 @@
+# Run resource monitor every 10 minutes
+*/10 * * * * /path/to/scripts/resource_monitor.sh >> /var/log/resource_monitor.log 2>&1
+
+# Run log archiver every Saturday at 2:00 AM
+0 2 * * 6 /path/to/scripts/log_archiver.sh >> /var/log/log_archiver.log 2>&1
+
+# Run disk cleanup every Sunday at 3:00 AM
+0 3 * * 0 /path/to/scripts/disk_cleanup.sh >> /var/log/disk_cleanup.log 2>&1
+
+# Run service checker every hour
+0 * * * * /path/to/scripts/service_checker.sh >> /var/log/service_checker.log 2>&1
